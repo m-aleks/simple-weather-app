@@ -1,0 +1,326 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*end reset*/
+sup{
+  vertical-align: super;
+  font-size: small;
+}
+body{
+  font-family: Arial, sans-serif;
+  color: #444;
+  background-color: #ddf;
+}
+html{
+  overflow-y: scroll;
+}
+div{
+  box-sizing: border-box;
+  -moz-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out; 
+  transition: all 300ms ease-out;
+}
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ccf;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.panel{
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(85,85,85,1);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(85,85,85,1);
+  box-shadow: inset 0px 0px 5px 0px rgba(85,85,85,1);
+}
+/*header*/
+.header{
+  background-color: #cff;
+  height: 50px;
+  line-height: 50px;
+  margin: 10px 0;
+  padding: 0 20px;
+}
+.header_heading{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #555;
+}
+/*Add location form, locations*/
+.locationsContainer{
+  width: 300px;
+  box-sizing: border-box;
+  float: left;
+  background-color: #ddf;
+}
+.locationContainer{
+  height: 50px;
+  line-height: 50px;
+  border-top: 1px solid #555;
+  padding: 0 0 0 20px;
+  overflow: hidden;
+  background-color: #ddf;
+  cursor: pointer;
+  transition: none;
+}
+.locationContainer:hover {
+  /*color: #888;*/
+  background-color: #bbf;
+  text-shadow: 0 0 2px #fff;
+}
+.currentLocation{
+  border-top: 0;
+  border-bottom: 1px solid #555;
+}
+.geoIcon{
+  display: inline-block;
+  padding: 0 5px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.addContainer{
+  height: 50px;
+  line-height: 46px;
+  text-align:center;
+}
+.addInput{
+  margin: 0 5px;
+  height: 25px;
+  width: 200px;
+  border-radius: 2px;
+}
+.addBtn{
+  height: 25px;
+  border-radius: 2px;
+  background-color: #ccf;
+}
+.addedLocations{
+  position: relative;
+  overflow: hidden;
+}
+.locationsToggler{
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  display: none;
+  position: relative;
+}
+.toggleIcon{
+  display: block;
+  height:.15em;
+  width: 2em;
+  position:relative;
+  top: 1.5em;
+  right: -2em;
+  background-color: #444;
+}
+.toggleIcon:before{
+  content:'';
+  background-color: #444;
+  height:.15em;
+  width: 2em;
+  position:absolute;
+  top:-0.5em;
+}
+.toggleIcon:after{
+  content:'';
+  background-color: #444;
+  height:.15em;
+  width: 2em;
+  position:absolute;
+  bottom:-0.5em;
+}
+.locationName{
+  display: inline-block;
+  max-width: 230px;
+}
+.locationRemoveBtn{
+  display: inline-block;
+  width: 50px;
+  float: right;
+  text-align: center;
+  color: #777;
+}
+.locationRemoveBtn:hover {
+  text-shadow: 2px 2px #444;
+}
+/*Weather*/
+.allWeatherContainer{
+  padding: 10px;
+  width: 600px;
+  box-sizing: border-box;
+  float: right;
+  background-color: #fcc;
+}
+.weatherContainer{
+
+}
+.weatherLocation{
+  font-size: 1.8em;
+}
+.weatherDate{
+  text-transform: capitalize;
+}
+.weatherIcon{
+  float: left;
+  margin-right: 40px;
+}
+.weatherTemp{
+  font-size: 30px;
+}
+.weatherDescription{
+  font-size: 1.1em;
+}
+.weatherTable{
+  margin: 10px 0;
+  width: 360px;
+}
+.weatherTableData{
+  font-size: 0.9em;
+  width: 50%;
+}
+/*Forecast*/
+.forecastContainer{
+}
+.forecastTodayTable{
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+/*Daily forecast*/
+.dailyForecastContainer{
+  overflow: hidden;
+}
+.dailyForecastToggler{
+  text-align: center;
+  margin: 10px 0 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #007;
+}
+.dailyForecastDay{
+  overflow: hidden;
+  border-top: 1px solid #aaa;
+  padding: 0 20px;
+}
+.dailyForecastDay_main>*{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.dailyForecastDate{
+  text-transform: capitalize;
+  font-size: 1.1em;
+  width: 100px;
+}
+.dailyForecastIcon{
+
+}
+.dailyForecastTemp{
+  width: 100px;
+}
+.dailyForecastDescription{
+
+}
+.dailyForecastToggleIcon{
+  float: right;
+  padding: 18px 0;
+  color: #888;
+}
+.dailyForecastDay_full{
+  padding: 5px;
+}
+.dailyForecastTable{
+  width: 100%;
+}
+.dailyForecastTableData{
+  font-size: 0.8em;
+  text-align: right;
+}
+@media only screen and (max-width: 900px) {
+  .locationsContainer{
+    width: 100%;
+    height: 100px;
+  }
+  .locationsContainer>div{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .currentLocation{
+    width: 100%;
+  }
+  .addContainer{
+    width: 50%;
+  }
+  .addedLocations{
+    width: 50%;
+  }
+  .locationContainer{
+    border-top: none;
+  }
+  .locationsToggler{
+    display: block;
+  }
+  .locationsList{
+    height: 0;
+    margin-right: 300px;
+  }
+  .addedLocations:hover .locationsList{
+    height: auto;
+    margin-right: 0;
+  }
+
+  .allWeatherContainer{
+    width: 100%;
+  }
+  .forecastTodayTable{
+    font-size: 1.1em;
+  }
+}
+  
